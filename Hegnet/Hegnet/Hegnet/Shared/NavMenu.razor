@@ -1,39 +1,82 @@
 ﻿<div class="top-row ps-3 navbar navbar-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="">Hegnet</a>
-        <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
+        <span class="oi oi-menu" style="color:white;" aria-hidden="true" @onclick="ToggleIconMenu"></span>
+        @if (!@IconMenuActive)
+        {
+            <a class="navbar-brand" href="">Hegnet portal</a>
+        }
+        <button title="Navigation menu" class="navbar-toggler">
             <span class="navbar-toggler-icon"></span>
         </button>
     </div>
 </div>
 
-<div class="@NavMenuCssClass nav-scrollable" @onclick="ToggleNavMenu">
+<div class="" @onclick="ToggleIconMenu">
     <nav class="flex-column">
         <div class="nav-item px-3">
             <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="oi oi-home" aria-hidden="true"></span> Home
+                <span class="oi oi-home" aria-hidden="true"></span>
+                @if (!@IconMenuActive)
+                {
+                    <label>Start</label>
+                }
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="news">
+                <span class="oi oi-bell" aria-hidden="true"></span>
+                @if (!@IconMenuActive)
+                {
+                    <label>Nyheder</label>
+                }
             </NavLink>
         </div>
         <div class="nav-item px-3">
             <NavLink class="nav-link" href="counter">
-                <span class="oi oi-plus" aria-hidden="true"></span> Counter
+
+                <span class="oi oi-chat" aria-hidden="true"></span>
+                @if (!@IconMenuActive)
+                {
+                    <label>Chat</label>
+                }
             </NavLink>
         </div>
         <div class="nav-item px-3">
-            <NavLink class="nav-link" href="fetchdata">
-                <span class="oi oi-list-rich" aria-hidden="true"></span> Fetch data
+            <NavLink class="nav-link" href="users">
+                <span class="oi oi-person" aria-hidden="true"></span>
+                @if (!@IconMenuActive)
+                {
+                    <label>Brugere</label>
+                }
             </NavLink>
         </div>
     </nav>
+
+
+</div>
+
+<div class="bottom-row">
+    <div class="icon-menu-arrow">
+        @if (!@IconMenuActive)
+        {
+            <span class="oi oi-chevron-left" style="color: white;" @onclick="ToggleIconMenu"></span>
+        }
+        else
+        {
+            <span class="oi oi-chevron-right" style="color: white;" @onclick="ToggleIconMenu"></span>
+        }
+    </div>
 </div>
 
 @code {
-    private bool collapseNavMenu = true;
 
-    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+    private bool IconMenuActive { get; set; } = true;
+    [Parameter]
+    public EventCallback<bool> ShowIconMenu { get; set; }
 
-    private void ToggleNavMenu()
+    private async Task ToggleIconMenu()
     {
-        collapseNavMenu = !collapseNavMenu;
+        IconMenuActive = !IconMenuActive;
+        await ShowIconMenu.InvokeAsync(IconMenuActive);
     }
 }

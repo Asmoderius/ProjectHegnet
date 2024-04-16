@@ -79,6 +79,19 @@ main[b-idpbu12bp3] {
     background-color: rgba(0,0,0,0.4);
 }
 
+.bottom-row[b-5pj2s0uel2] {
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 10px;
+    text-align: right;
+    width: 100%;
+    padding-right: 28px;
+}
+
+.icon-menu-arrow[b-5pj2s0uel2] {
+    text-align: right;
+}
+
 .navbar-brand[b-5pj2s0uel2] {
     font-size: 1.1rem;
 }
@@ -112,15 +125,15 @@ main[b-idpbu12bp3] {
         line-height: 3rem;
     }
 
-.nav-item[b-5pj2s0uel2]  a.active {
-    background-color: rgba(255,255,255,0.25);
-    color: white;
-}
+        .nav-item[b-5pj2s0uel2]  a.active {
+            background-color: rgba(255,255,255,0.25);
+            color: white;
+        }
 
-.nav-item[b-5pj2s0uel2]  a:hover {
-    background-color: rgba(255,255,255,0.1);
-    color: white;
-}
+        .nav-item[b-5pj2s0uel2]  a:hover {
+            background-color: rgba(255,255,255,0.1);
+            color: white;
+        }
 
 @media (min-width: 641px) {
     .navbar-toggler[b-5pj2s0uel2] {
@@ -131,10 +144,10 @@ main[b-idpbu12bp3] {
         /* Never collapse the sidebar for wide screens */
         display: block;
     }
-    
-    .nav-scrollable[b-5pj2s0uel2] {
-        /* Allow sidebar to scroll for tall menus */
-        height: calc(100vh - 3.5rem);
-        overflow-y: auto;
+}
+
+@media (max-width: 640px) {
+    .bottom-row[b-5pj2s0uel2] {
+        display: block;
     }
 }

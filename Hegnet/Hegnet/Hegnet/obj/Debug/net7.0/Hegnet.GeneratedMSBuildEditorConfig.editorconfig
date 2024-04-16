@@ -20,10 +20,6 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/asmod/Desktop/ProjectHegnet/Hegnet/Hegnet/Hegnet/Pages/Chat.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2hhdC5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/asmod/Desktop/ProjectHegnet/Hegnet/Hegnet/Hegnet/Pages/Counter.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
@@ -42,6 +38,18 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/asmod/Desktop/ProjectHegnet/Hegnet/Hegnet/Hegnet/Pages/News.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTmV3cy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/asmod/Desktop/ProjectHegnet/Hegnet/Hegnet/Hegnet/Pages/NewsOverview.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTmV3c092ZXJ2aWV3LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/asmod/Desktop/ProjectHegnet/Hegnet/Hegnet/Hegnet/Pages/Users.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlcnMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/asmod/Desktop/ProjectHegnet/Hegnet/Hegnet/Hegnet/Pages/ViewNewsPost.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlld05ld3NQb3N0LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/asmod/Desktop/ProjectHegnet/Hegnet/Hegnet/Hegnet/Shared/SurveyPrompt.razor]

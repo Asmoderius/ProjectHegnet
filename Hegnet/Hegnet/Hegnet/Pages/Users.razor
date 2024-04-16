@@ -1,0 +1,44 @@
+﻿@page "/users"
+@using Hegnet.Data
+@using Hegnet.Data.Model;
+@inject UserService userService
+<h3>Brugere</h3>
+
+@if (users == null)
+{
+    <p><em>Henter...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Navn</th>
+                <th>Addresse</th>
+                <th>Telefon</th>
+                <th>Email</th>
+                <th>Rolle</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var user in users)
+            {
+                <tr>
+                    <td>@user.GetName()</td>
+                    <td>@user.GetAddress()</td>
+                    <td>@user.TelephoneNumber</td>
+                    <td>@user.Email</td>
+                    <td>@user.Role.ToString()</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+@code {
+    private User[]? users;
+
+    protected override async Task OnInitializedAsync()
+    {
+        users = await userService.GetUsersAsync();
+    }
+}

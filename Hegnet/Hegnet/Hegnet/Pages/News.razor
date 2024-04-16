@@ -1,5 +1,22 @@
-﻿<h3>News</h3>
+﻿
+@using Hegnet.Data
+@using Hegnet.Data.Model;
 
+<div class="post-preview">
+    <NavLink href="@($"viewpost/{newsPost.ID}")">
+        <h2 class="post-title">
+            @newsPost.Topic
+        </h2>
+        <h3 class="post-subtitle">
+            @newsPost.ContentSummary
+        </h3>
+    </NavLink>
+    <p class="post-meta">
+        Skrevet af
+        <NavLink href="/">@newsPost.User.GetName()</NavLink>
+        on @newsPost.Posted
+    </p>
+</div>
 @code {
-
+    [Parameter] public NewsPost newsPost { get; set; }
 }

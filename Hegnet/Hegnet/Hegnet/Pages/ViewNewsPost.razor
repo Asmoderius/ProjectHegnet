@@ -1,0 +1,46 @@
+﻿@page "/viewpost/{postId}"
+@using Hegnet.Data.Model;
+@using Hegnet.Data;
+@inject NewsService newsService;
+<h3>ViewNewsPost</h3>
+
+<header class="masthead" style="background-image: url('/img/home-bg.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <div class="post-heading">
+                    <h1>@NewsPost.Topic</h1>
+                    <span class="meta">Posted by <a href="#">@NewsPost.User.GetName()</a> on @NewsPost.Posted.ToShortDateString()</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                @NewsPost.Content
+            </div>
+        </div>
+    </div>
+</article>
+
+@code {
+
+    [Parameter] public string PostId { get; set; }
+
+    protected NewsPost NewsPost { get; set; } = new NewsPost();
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadNewsPost();
+    }
+
+    private async Task LoadNewsPost()
+    {
+        NewsPost = await newsService.GetNewsPostByIdAsync(int.Parse(PostId) );
+    }
+}
