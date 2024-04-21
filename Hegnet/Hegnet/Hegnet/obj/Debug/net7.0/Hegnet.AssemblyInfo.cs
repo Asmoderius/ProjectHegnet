@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Hegnet")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8b599a4db611885b57db0bdbe5f738206fbc991a")]
 [assembly: System.Reflection.AssemblyProductAttribute("Hegnet")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Hegnet")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

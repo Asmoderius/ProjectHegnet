@@ -1,0 +1,38 @@
+﻿@page "/addpost"
+@using Hegnet.Data.Model;
+@using Hegnet.Data;
+@inject NewsService newsService
+@inject UserService userService
+@inject NavigationManager navigationManager
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="editor">
+                <input @bind=@Topic placeholder="Title" class="form-control" />
+                <textarea @bind=@Post placeholder="Write your post" rows="25"></textarea>
+                <button class="btn btn-primary float-right" @onclick="@SavePost">Post</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    protected string Post { get; set; }
+    protected string Topic { get; set; }
+
+    public async Task SavePost()
+    {
+        var users = await userService.GetUsersAsync();
+        var newPost = new NewsPost()
+            {
+                Topic = Topic,
+                Content = Post,
+                Posted = DateTime.Now,
+                User = users[0],
+
+            };
+        var id = newsService.AddNewsPort(newPost);
+        navigationManager.NavigateTo($"/viewpost/{id}");
+    }
+}

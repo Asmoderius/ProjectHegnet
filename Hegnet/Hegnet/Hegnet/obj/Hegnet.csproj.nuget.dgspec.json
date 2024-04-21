@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\asmod\\Desktop\\ProjectHegnet\\Hegnet\\Hegnet\\Hegnet\\Hegnet.csproj": {}
+    "C:\\Projects\\Hegnet\\ProjectHegnet\\Hegnet\\Hegnet\\Hegnet\\Hegnet.csproj": {}
   },
   "projects": {
-    "C:\\Users\\asmod\\Desktop\\ProjectHegnet\\Hegnet\\Hegnet\\Hegnet\\Hegnet.csproj": {
+    "C:\\Projects\\Hegnet\\ProjectHegnet\\Hegnet\\Hegnet\\Hegnet\\Hegnet.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\asmod\\Desktop\\ProjectHegnet\\Hegnet\\Hegnet\\Hegnet\\Hegnet.csproj",
+        "projectUniqueName": "C:\\Projects\\Hegnet\\ProjectHegnet\\Hegnet\\Hegnet\\Hegnet\\Hegnet.csproj",
         "projectName": "Hegnet",
-        "projectPath": "C:\\Users\\asmod\\Desktop\\ProjectHegnet\\Hegnet\\Hegnet\\Hegnet\\Hegnet.csproj",
-        "packagesPath": "C:\\Users\\asmod\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\asmod\\Desktop\\ProjectHegnet\\Hegnet\\Hegnet\\Hegnet\\obj\\",
+        "projectPath": "C:\\Projects\\Hegnet\\ProjectHegnet\\Hegnet\\Hegnet\\Hegnet\\Hegnet.csproj",
+        "packagesPath": "C:\\Users\\LouisFleron\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\Hegnet\\ProjectHegnet\\Hegnet\\Hegnet\\Hegnet\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\asmod\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\LouisFleron\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -39,6 +39,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -63,7 +68,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
         }
       }
     }

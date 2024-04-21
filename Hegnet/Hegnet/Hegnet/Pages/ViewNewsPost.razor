@@ -41,6 +41,6 @@
 
     private async Task LoadNewsPost()
     {
-        NewsPost = await newsService.GetNewsPostByIdAsync(int.Parse(PostId) );
+        NewsPost = newsService.GetNewsPostById(int.Parse(PostId) );
     }
 }
